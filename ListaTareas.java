@@ -39,7 +39,7 @@ public class ListaTareas
             textoAMostrar = posicion + "-. " +tarea.getDescripcion();
             if (tarea.getValidarTarea())
             {
-                textoAMostrar = "HECHO. ";
+                textoAMostrar = textoAMostrar + " HECHO. " ;
             }
             System.out.println(textoAMostrar);
             posicion++;
@@ -50,5 +50,14 @@ public class ListaTareas
      * Marcar como completada una tarea indicando su numero 
      * (teniendo en cuenta que la numeración de las tareas empieza en 1)
      */
+    
+    public void marcarCompletada(int numeroTarea)
+    {
+        int posicion = numeroTarea - 1;
+        if ( posicion >= 0 && posicion < listaDeTareas.size())
+        {
+           listaDeTareas.get(posicion).completarTarea();
+        }
+    }
     
 }

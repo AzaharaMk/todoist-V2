@@ -15,14 +15,22 @@ public class Tarea
        tareaCompletada = false;
     }
     
+    //Devuelve el valor de la descripcion
     public String getDescripcion()
     {
         return descripcion;
     }
     
+    //Devuelve el valor de la variable tarea
     public boolean getValidarTarea()
     {
         return tareaCompletada;
+    }
+    
+    //cambia el valor del atributo tareaCompletada
+    public void completarTarea()
+    {
+        tareaCompletada = true;
     }
     
 }
