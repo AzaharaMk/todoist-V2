@@ -60,4 +60,30 @@ public class ListaTareas
         }
     }
     
+    /**
+     * Mostrar todas las tareas cuyo nombre contenga un determinado texto
+     * indicando si estan completadas o no
+     */
+    
+    public void textoCoincidente(String textoABuscar)
+    {
+        int posicion = 1;
+        String textoAMostrar = "";
+        
+        for (Tarea tarea: listaDeTareas)
+        {
+            if (tarea.getDescripcion().contains(textoABuscar))
+            {
+                textoAMostrar = posicion + "-. " +tarea.getDescripcion();
+                if (tarea.getValidarTarea())
+                {
+                    textoAMostrar = textoAMostrar + " HECHO. " ;
+                }
+                System.out.println(textoAMostrar);
+            }
+            posicion++;
+        }
+        
+    }
+  
 }
