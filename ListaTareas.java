@@ -86,4 +86,12 @@ public class ListaTareas
         
     }
   
+     public void eliminarTarea(int posicion)
+     {
+         posicion = posicion -1;
+         if (posicion >= 0 && posicion < listaDeTareas.size())
+         {
+              listaDeTareas.remove(posicion);
+         }
+     }
 }
