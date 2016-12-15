@@ -24,5 +24,31 @@ public class ListaTareas
        Tarea nuevaTarea = new Tarea(descripcion);
        listaDeTareas.add(nuevaTarea);
     }
-   
+    
+    /**
+     * Ver todas las tareas numeradas (empezando en 1) pudiendo ver si estan
+     * completadas o no
+     */
+    
+    public void mostrarTareas()
+    {
+        int  posicion = 1;
+        for (Tarea tarea: listaDeTareas)
+        {
+            String textoAMostrar= "";
+            textoAMostrar = posicion + "-. " +tarea.getDescripcion();
+            if (tarea.getValidarTarea())
+            {
+                textoAMostrar = "HECHO. ";
+            }
+            System.out.println(textoAMostrar);
+            posicion++;
+        }
+    }
+    
+    /**
+     * Marcar como completada una tarea indicando su numero 
+     * (teniendo en cuenta que la numeración de las tareas empieza en 1)
+     */
+    
 }
